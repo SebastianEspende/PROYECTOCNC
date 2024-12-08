@@ -7,8 +7,8 @@
 #include <SimpleRotary.h>
 #include <input/SimpleRotaryAdapter.h>
 #include <renderer/CharacterDisplayRenderer.h>
-#define LCD_ROWS 4
-#define LCD_COLS 20
+#define LCD_ROWS 2
+#define LCD_COLS 16
 
 extern MenuScreen* SDScreen;
 extern MenuScreen* INFOScreen;
@@ -67,5 +67,6 @@ void LCDLoop() {
   rotaryInput.observe();
 }
 void arclocselec(uint8_t pos) {
-  // do something with the index
+  String NombreArchivo = Files[pos];
+  
 }
