@@ -5652,7 +5652,7 @@
 		)
 		(uuid "23f0c933-49f0-4410-a8db-8b017f48dadc")
 	)
-	(label "8"
+	(label "*11"
 		(at 267.97 109.22 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5674,7 +5674,7 @@
 		)
 		(uuid "24297ed0-352f-4da5-88c2-1c04414f6891")
 	)
-	(label "7"
+	(label "12"
 		(at 279.4 106.68 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5828,7 +5828,7 @@
 		)
 		(uuid "691e74f2-0d54-4a91-807f-c7333c591377")
 	)
-	(label "*5"
+	(label "13"
 		(at 172.72 119.38 0)
 		(fields_autoplaced yes)
 		(effects
