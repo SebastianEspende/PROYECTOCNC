@@ -252,7 +252,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-000056d71773")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -587,7 +587,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-000056d72f1c")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -900,7 +900,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-000056d72368")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1257,7 +1257,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-000056d734d0")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1590,7 +1590,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/bde92e09-ffe9-4622-9819-3320d5eb5c33")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1879,7 +1879,7 @@
 		)
 		(property ki_fp_filters "Pololu*Breakout*15.2x20.3mm*")
 		(path "/ec845b5d-e1d4-4d40-bfe5-a26d2af35d75")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2243,7 +2243,7 @@
 			(drill oval 1 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/12")
+			(net 20 "/2")
 			(pinfunction "STEP")
 			(pintype "input")
 			(uuid "36c77022-9b5b-4b21-9851-1472655d4e4f")
@@ -2254,7 +2254,7 @@
 			(drill oval 1 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 24 "/*3")
+			(net 22 "/*5")
 			(pinfunction "DIR")
 			(pintype "input")
 			(uuid "6133bccf-b7df-46ed-b925-c75534428d58")
@@ -2340,7 +2340,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/291b10ae-af99-4037-9261-df7278cd28a2")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2835,7 +2835,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/70f1c679-d575-4cb1-b4c8-2fdbde7e9f47")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3113,7 +3113,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/2355cff0-4379-4220-a00a-4f34e416969d")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -4851,7 +4851,7 @@
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/02e34bff-70fb-448a-9baf-6a314f592f10")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5093,7 +5093,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/94ac4e12-312a-4d1e-982c-5784c90599ae")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5360,7 +5360,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/188baec3-d8d5-4919-b164-622d8a25fa9d")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5635,7 +5635,7 @@
 		)
 		(property ki_fp_filters "Pololu*Breakout*15.2x20.3mm*")
 		(path "/0f848ea9-3dd1-4508-8c55-5baae62af964")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5999,7 +5999,7 @@
 			(drill oval 1 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "/*11")
+			(net 24 "/*3")
 			(pinfunction "STEP")
 			(pintype "input")
 			(uuid "d47406ac-b737-4c50-9eec-ed2d304acc1b")
@@ -6096,7 +6096,7 @@
 		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2a9e69c9-1f88-498a-a5a5-f40a89492d52")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -6339,7 +6339,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/b8ef7fb9-ced9-48ba-974c-52c3c5f50417")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -6611,7 +6611,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/ad0385e6-10ab-4abc-b680-336e57aefb77")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7084,7 +7084,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/1d5252ac-81ae-4aae-ad9b-4ba92d9abecd")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7362,7 +7362,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/9fca2e76-f555-40a5-ad83-a7defd9f8a46")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7651,7 +7651,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/6fec1293-dc06-4596-889f-aeec44bd5586")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7926,7 +7926,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/6d4ff418-58bd-4369-af62-2a991a3d0322")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -8204,7 +8204,7 @@
 		)
 		(property ki_fp_filters "TO?220*")
 		(path "/468241b2-6344-44a5-ad18-6921b53997b4")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -8512,7 +8512,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/3f59159b-9f18-4a42-854e-307a28fd5f80")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -8787,7 +8787,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/d65d2897-b182-4931-99ea-0598e6bb7e50")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -9076,7 +9076,7 @@
 		)
 		(property ki_fp_filters "Pololu*Breakout*15.2x20.3mm*")
 		(path "/7f37ebff-e0a7-401d-a5f0-e895abe63dbb")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -9440,7 +9440,7 @@
 			(drill oval 1 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/*10")
+			(net 19 "/4")
 			(pinfunction "STEP")
 			(pintype "input")
 			(uuid "c1c63461-16fc-4253-b9bb-02ea148f838a")
@@ -9451,7 +9451,7 @@
 			(drill oval 1 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 20 "/2")
+			(net 15 "/7")
 			(pinfunction "DIR")
 			(pintype "input")
 			(uuid "2b336760-8d5d-4786-bd2c-eb4554d1ddf0")
@@ -9537,7 +9537,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/5f5ced67-3816-4f12-afcd-1f044543d62a")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -11275,7 +11275,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/24ae1d35-2b5d-410d-a39c-42104582e62d")
-		(sheetname "Raíz")
+		(sheetname "Root")
 		(sheetfile "ARD-MOTORES2.kicad_sch")
 		(attr through_hole)
 		(fp_line
