@@ -1,6 +1,6 @@
 #include <WiFi.h>
-const char *ssid = "your-ssid";
-const char *password = "your-password";
+const char *ssid = "LaboPLC";
+const char *password = "Link1982";
 
 int btnGPIO = 0;
 int btnState = false;
@@ -12,7 +12,7 @@ void wifisetup() {
 
   WiFi.begin(ssid, password);
   int tryDelay = 500;
-  int numberOfTries = 20;  while (true) {
+  int numberOfTries = 5;  while (true) {
     switch (WiFi.status()) {
       case WL_NO_SSID_AVAIL: Serial.println("[WiFi] SSID not found"); break;
       case WL_CONNECT_FAILED:
@@ -36,7 +36,7 @@ void wifisetup() {
     delay(tryDelay);
 
     if (numberOfTries <= 0) {
-      Serial.print("[WiFi] Failed to connect to WiFi!");
+      Serial.print("[WiFi] No se pudo conectar!");
       // Use disconnect function to force stop trying to connect
       WiFi.disconnect();
       return;
@@ -49,9 +49,9 @@ void wifisetup() {
 void wifiloop() {
   btnState = digitalRead(btnGPIO);
   if (btnState == LOW) {
-    Serial.println("[WiFi] Disconnecting from WiFi!");
+    Serial.println("[WiFi] Desconectando del WiFi!");
     if (WiFi.disconnect(true, false)) {
-      Serial.println("[WiFi] Disconnected from WiFi!");
+      Serial.println("[WiFi] Desconectando del WiFi!");
     }
     delay(1000);
   }

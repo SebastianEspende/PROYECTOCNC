@@ -1,8 +1,5 @@
-std::vector<std::string> all_local_files;
-int numFiles = all_local_files.size();
-String* Files = (String*)malloc(numFiles * sizeof(String));
 int counter = 0;
-
+bool SD0 = false;
 void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
   Serial.printf("Listing directory: %s\n", dirname);
 
@@ -15,6 +12,10 @@ void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
     Serial.println("No es una ruta valida");
     return;
   }
+  if (counter > 50) {
+    Serial.println("El numero de archivos es mayor al maximo");
+    return;
+    }
   File file = root.openNextFile();
   while (file) {
     if (file.isDirectory()) {
@@ -28,9 +29,8 @@ void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
       Serial.print(file.name());
       Serial.print("  TAMAÑO: ");
       Serial.println(file.size());
-      Files[counter] = file.name();
+      Files[counter] = String(file.name());
       counter++;
-      all_local_files.push_back(file.name());
     }
     file = root.openNextFile();
   }
@@ -58,12 +58,13 @@ void readFile(fs::FS &fs, const char *path) {
 void sdsetup() {
   if (!SD.begin()) {
     Serial.println("No se pudo inicializar la tarjeta SD");
+    SD0 = true;
     return;
   } else {
     SD.begin();
   }
   uint8_t cardType = SD.cardType();
-
+ 
   if (cardType == CARD_NONE) {
     Serial.println("No hay tarjeta SD");
     return;
@@ -79,7 +80,8 @@ void sdsetup() {
   } else {
     Serial.println("DESCONOCIDA");
   }
-
+  listDir(SD, "/", 0);
+  
   uint64_t cardSize = SD.cardSize() / (1024 * 1024);
   Serial.printf("TAMAÑO DE SD: %lluMB\n", cardSize);
 
