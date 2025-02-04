@@ -12,6 +12,7 @@
     "express": "^4.21.1",
     "express-fileupload": "^1.5.1",
     "file-system": "^1.2.2",
+    "fs": "^0.0.1-security",
     "morgan": "~1.9.1",
     "node-dir": "^0.1.17",
     "nodemon": "^3.1.9"

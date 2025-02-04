@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body class="">
-  <div class="container">
-    <div class="introduccion">
-      <h1>PCB CNC DRILL</h1>
-      <hr />
-      <h2>¿Que es?</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa enim, elementum ut magna quis, rutrum blandit diam. Sed finibus ultricies sapien, eget eleifend mi placerat eget. Nunc a libero tellus. Suspendisse ac lorem purus. Aenean ut nisi lacus. Proin magna nisi, porttitor eu nulla eget, vulputate semper dolor. Aenean posuere dictum nisl, nec finibus urna. Curabitur sollicitudin erat sed quam condimentum fermentum.
-
-        Quisque egestas augue nec vestibulum semper. Aliquam nunc eros, fermentum ultricies consequat nec, mollis vitae tortor. Sed ipsum eros, finibus at porta vitae, sagittis eget lacus. Aliquam finibus turpis finibus, imperdiet ante vel, pretium arcu. Nulla et dictum arcu. Nullam ac feugiat libero. Praesent gravida nulla a nisi pretium mattis. Vivamus interdum sapien in molestie ullamcorper. Nullam porta purus id felis blandit, ut maximus velit elementum. Integer non justo diam. Pellentesque magna sapien, placerat in odio in, varius pulvinar velit. Donec sollicitudin neque eros, eget tempor risus vulputate id. Donec at aliquet diam.
-        
-        Quisque accumsan vel ante quis pulvinar. Duis volutpat justo sit amet nisi aliquam bibendum. Praesent feugiat rhoncus tristique. Nunc ac ex ut metus lobortis elementum. Maecenas placerat purus lectus. Suspendisse potenti. Sed vehicula varius turpis, nec porttitor tortor molestie a. Morbi at diam nunc. Duis viverra turpis non nulla laoreet aliquam. Maecenas vitae lacus tincidunt, aliquet est eu, fermentum neque.</p>
-      <h2>Subir archivos</h2>
-      <form action="/files" method="post" enctype="multipart/form-data">
-        <label for="file">Elegir archivo</label>
-        <input type="file" id="file" name="file" accept=".gbr,.brd,.kicad_pcb,.sch,.pro,.svg,.drl,.dxf,.dwg,.lbr,.stl,.zip,.7z,.tar,.rar,.gz,.bz2,.xz,.7z,.tar.bz2,.tar.xz,.tar.lzma,.tar.gz">
-        <button type="submit">Subir</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body class="">
+    <div class="container">
+      <div class="introduccion">
+        <h1>PCB CNC DRILL</h1>
+        <hr />
+        <h2>¿Que es?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          massa enim, elementum ut magna quis, rutrum blandit diam. Sed finibus
+          ultricies sapien, eget eleifend mi placerat eget. Nunc a libero
+          tellus. Suspendisse ac lorem purus. Aenean ut nisi lacus. Proin magna
+          nisi, porttitor eu nulla eget, vulputate semper dolor. Aenean posuere
+          dictum nisl, nec finibus urna. Curabitur sollicitudin erat sed quam
+          condimentum fermentum. Quisque egestas augue nec vestibulum semper.
+          Aliquam nunc eros, fermentum ultricies consequat nec, mollis vitae
+          tortor. Sed ipsum eros, finibus at porta vitae, sagittis eget lacus.
+          Aliquam finibus turpis finibus, imperdiet ante vel, pretium arcu.
+          Nulla et dictum arcu. Nullam ac feugiat libero. Praesent gravida nulla
+          a nisi pretium mattis. Vivamus interdum sapien in molestie
+          ullamcorper. Nullam porta purus id felis blandit, ut maximus velit
+          elementum. Integer non justo diam. Pellentesque magna sapien, placerat
+          in odio in, varius pulvinar velit. Donec sollicitudin neque eros, eget
+          tempor risus vulputate id. Donec at aliquet diam. Quisque accumsan vel
+          ante quis pulvinar. Duis volutpat justo sit amet nisi aliquam
+          bibendum. Praesent feugiat rhoncus tristique. Nunc ac ex ut metus
+          lobortis elementum. Maecenas placerat purus lectus. Suspendisse
+          potenti. Sed vehicula varius turpis, nec porttitor tortor molestie a.
+          Morbi at diam nunc. Duis viverra turpis non nulla laoreet aliquam.
+          Maecenas vitae lacus tincidunt, aliquet est eu, fermentum neque.
+        </p>
+        <h2>Subir archivos</h2>
+        <form
+          ref="uploadForm"
+          id="uploadForm"
+          action="files"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label for="file">Elije el archivo:</label>
+          <input type="file" id="file" name="file" />
+          <input type="submit" value="Subir!" />
         </form>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
