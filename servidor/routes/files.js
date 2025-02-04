@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const fileUpload = require('express-fileupload');
 
-router.post('/upload', 
+router.post('/', 
     fileUpload({ createParentPath: true }),
   (req, res) => {
     if (!req.files) {

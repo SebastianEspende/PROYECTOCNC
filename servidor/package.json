@@ -10,14 +10,10 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "^4.21.1",
-<<<<<<< HEAD
     "express-fileupload": "^1.5.1",
     "file-system": "^1.2.2",
     "morgan": "~1.9.1",
     "node-dir": "^0.1.17",
-    "nodemon": "^3.1.7"
-=======
-    "morgan": "~1.9.1"
->>>>>>> c57fea8db6fed42fead1b7035eccb23a59c29767
+    "nodemon": "^3.1.9"
   }
 }
