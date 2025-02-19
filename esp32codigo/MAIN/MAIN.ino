@@ -7,41 +7,38 @@
 #include "FS.h"
 #include "SD.h"
 #include "SPI.h"
+#include "globales.h"
 
+void wifibegin(const char *ssid,const char *password);
 void setup() {
 
-  Serial.begin(115200);
-
+  
+  Serial.printf("COM_SERIAL_SETUP");
+  COM_SERIAL_SETUP();
   while (!Serial) {
     delay(10);
   }
 
   // SD ////////////////////////////////////////////////////////
+  Serial.printf("sdsetup");
   sdsetup();
   // WIFI ///////////////////////////////////////////////////////////////////////////
+  Serial.printf("wifisetup");
   wifisetup();
 
   //LCD /////////////////////////////////////////////////////////////////////
+  Serial.printf("lcdsetup");
   LCDSetup();
 }
 
 void loop() {
-  // QUE HAY Q HACER:
-  // SD Y LCD
-  /* SD: HAY QUE ACTIVAR EL WIFI, CONECTARSE AL SERVIDOR Y TRAER LOS NOMBRES DE TODOS LOS ARCHIVOS GUARDADOS. PODER SELECCIONAR UNO Y DESCARGARLO.
-     WIFI: GET DEL SERVIDOR, CONECTARSE AL INTERNET, CONECTARSE A LA API
-     LCD: MOSTRAR LOS NOMBRES DE LOS ARCHIVOS EN EL SERVIDOR  , CONTROLAR LOS VENTILADORES 
-     - INFO
-      - SD ESPACIO Y VARIOS X
-      - COORDENADAS 
-     - CONFIG?
-  */
 
-  /* Comunicacion con arduino:
-   *  
-   */
   //LCD
+  Serial.printf("lcdloop");
   LCDLoop();
   // WIFI
+  Serial.printf("wifiloop");
   wifiloop();
+
+  COM_SERIAL_LOOP();
 }
