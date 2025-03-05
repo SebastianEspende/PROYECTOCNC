@@ -1,13 +1,23 @@
 #include <ItemCommand.h>
 #include <MenuItem.h>
 #include <ItemBack.h>
-#include <MenuScreen.h>
+#include <ItemSubMenu.h>
 #include <FileMenuItem.h>
+
+// Configuración del LCD
+
+
+// Referencias externas
+extern MenuScreen* WifiCfgScreen;
+
+// Variables para manejo de archivos
 int counter = 0;
 bool SD0 = false;
 String Files[MAX_FILES];
+
+// Lista los archivos en un directorio de la SD
 void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
-  Serial.printf("Listing directory: %s\n", dirname);
+  Serial.printf("Listando directorio: %s\n", dirname);
 
   File root = fs.open(dirname);
   if (!root) {
@@ -15,13 +25,14 @@ void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
     return;
   }
   if (!root.isDirectory()) {
-    Serial.println("No es una ruta valida");
+    Serial.println("No es una ruta válida");
     return;
   }
   if (counter > 50) {
-    Serial.println("El numero de archivos es mayor al maximo");
+    Serial.println("El número de archivos es mayor al máximo");
     return;
-    }
+  }
+  
   File file = root.openNextFile();
   while (file) {
     if (file.isDirectory()) {
@@ -42,26 +53,7 @@ void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
   }
 }
 
-
-void readFile(fs::FS &fs, const char *path) {
-  Serial.printf("Leyendo archivo: %s\n", path);
-
-  File file = fs.open(path);
-  if (!file) {
-    Serial.println("No se pudo abrir el archivo");
-    return;
-  }
-
-  while (file.available()) {
-  Serial.print("Leyendo el archivo: ");
-  Serial.print(file.name());
-  Serial.print("\n");
-    Serial.write(file.read());
-  }
-  file.close();
-}
-
-
+// Configura e inicializa la tarjeta SD
 void sdsetup() {
   if (!SD.begin()) {
     Serial.println("No se pudo inicializar la tarjeta SD");
@@ -70,6 +62,7 @@ void sdsetup() {
   } else {
     SD.begin();
   }
+  
   uint8_t cardType = SD.cardType();
  
   if (cardType == CARD_NONE) {
@@ -87,47 +80,42 @@ void sdsetup() {
   } else {
     Serial.println("DESCONOCIDA");
   }
+  
+  // Lista archivos y construye la pantalla
   listDir(SD, "/", 0);
   buildSDlocScreen();
   
   uint64_t cardSize = SD.cardSize() / (1024 * 1024);
   Serial.printf("TAMAÑO DE SD: %lluMB\n", cardSize);
-
   Serial.printf("Espacio total: %lluMB\n", SD.totalBytes() / (1024 * 1024));
   Serial.printf("Espacio usado: %lluMB\n", SD.usedBytes() / (1024 * 1024));
 }
 
-
-
 char selectedFilename[256];
-#include <functional> // For std::function
-#include <string>   // For std::string
-#include <cstring>  // For strdup
 MenuScreen *SDlocScreen = nullptr;
-MenuItem *SDlocItems[MAX_FILES + 2]; // +2 for header and back item
+MenuItem *SDlocItems[MAX_FILES + 2];
 
-// Function to read a line from a file (you'll need to implement this)
 String readLine(File& file) {
     String line = "";
     while (file.available()) {
         char c = file.read();
-        if (c == '\n' || c == '\r') break; // Stop at newline or carriage return
+        if (c == '\n' || c == '\r') break; 
         line += c;
     }
     return line;
 }
 
-String fileNames[MAX_FILES]; // For filename lifetime management
+String fileNames[MAX_FILES]; 
 
 
 void buildSDlocScreen() {
   Serial.println("Building Local Files Screen...");
     if (SDlocScreen != nullptr) {
         delete SDlocScreen;
-        SDlocScreen = nullptr;  // Important: Set to nullptr after deleting
+        SDlocScreen = nullptr;  
     }
 
-    for (int i = 0; i < MAX_FILES + 2; i++) { // Clear the SDlocItems array
+    for (int i = 0; i < MAX_FILES + 2; i++) { 
       SDlocItems[i] = nullptr;
     }
     
@@ -145,7 +133,7 @@ void buildSDlocScreen() {
         }
     }
     
-    SDlocItems[menuIndex++] = new ItemBack();
+    SDlocItems[menuIndex++] = new ItemBack("..");
     SDlocItems[menuIndex] = nullptr;
 
     SDlocScreen = new MenuScreen(SDlocItems);

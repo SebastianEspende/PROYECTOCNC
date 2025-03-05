@@ -1,44 +1,36 @@
- 
 //LCD
 #include <Wire.h>
 
 //SD
-
 #include "FS.h"
 #include "SD.h"
 #include "SPI.h"
 #include "globales.h"
 
-void wifibegin(const char *ssid,const char *password);
 void setup() {
-
-  
-  Serial.printf("COM_SERIAL_SETUP");
+  // Inicializar comunicación serial
   COM_SERIAL_SETUP();
   while (!Serial) {
     delay(10);
   }
 
-  // SD ////////////////////////////////////////////////////////
-  Serial.printf("sdsetup");
+  // Inicializar tarjeta SD
   sdsetup();
-  // WIFI ///////////////////////////////////////////////////////////////////////////
-  Serial.printf("wifisetup");
+  
+  // Inicializar WiFi
   wifisetup();
 
-  //LCD /////////////////////////////////////////////////////////////////////
-  Serial.printf("lcdsetup");
+  // Inicializar LCD
   LCDSetup();
 }
 
 void loop() {
-
-  //LCD
-  Serial.printf("lcdloop");
+  // Actualizar la pantalla LCD
   LCDLoop();
-  // WIFI
-  Serial.printf("wifiloop");
+  
+  // Actualizar el estado del WiFi
   wifiloop();
 
+  // Manejar la comunicación serial
   COM_SERIAL_LOOP();
 }
