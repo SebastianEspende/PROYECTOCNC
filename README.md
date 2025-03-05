@@ -27,15 +27,16 @@ A aquellos que les toque continuar nuestro proyecto, nos gustaria saberlo, les d
 ### Palabras de precaución
 los pines no son aleatorios, es importante que si quieren cambiarlo tengan en cuenta los grupos de los pines de un Arduino, si entran al cpu_map de GRBL se daran cuenta de lineas como esta para los 
 pines que tienen algo en común como step de cada motor, dir de cada motor, limit switches, etc; 
-´´´javascript
+
+```javascript
 #define STEP_DDR        DDRD
 #define STEP_PORT       PORTD
-´´´
+```
 DDRD y PORTD no son solo nombres, se refieren al grupo de pines utiliado por los STEP en este caso, otro ejemplo
-´´´javascript
+```javascript
 #define DIRECTION_DDR     DDRD
 #define DIRECTION_PORT    PORTD
-´´´
+```
 Ambos utilizan el grupo D, que son del pin 0 al 7.
 Grupo B utiliza pin 8 al 13.
 es por eso que la declaracion de pines pareciera incorrecta, ejemplo 
