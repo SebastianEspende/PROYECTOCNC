@@ -25,7 +25,7 @@ A aquellos que les toque continuar nuestro proyecto, nos gustaria saberlo, les d
 - josemcoronado671@gmail.com
 
 ### Palabras de precaución
-los pines no son aleatorios, es importante que si quieren cambiarlo tengan en cuenta los grupos de los pines de un Arduino, si entran al cpu_map de GRBL se daran cuenta de lineas como esta para los 
+los pines no son aleatorios, es importante que si quieren cambiarlo tengan en cuenta los grupos o puertos de los pines de un Arduino, si entran al cpu_map de GRBL se daran cuenta de lineas como esta para los 
 pines que tienen algo en común como step de cada motor, dir de cada motor, limit switches, etc; 
 
 ```javascript
@@ -42,6 +42,9 @@ Grupo B utiliza pin 8 al 13.
 es por eso que la declaracion de pines pareciera incorrecta, ejemplo 
 #define X_LIMIT_BIT      1
 Que utiliza el pin 9 pero se declara como 1, esto se debe a que utiliza el grupo B.
+
+
+Para que la comunicacion entre el ESP32 y el Arduino funcione, tienen que tener el mismo GND, o al menos, conectarlos
 
 ### Librerias
 
